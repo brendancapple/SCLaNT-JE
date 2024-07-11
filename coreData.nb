@@ -1,0 +1,504 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20678,        496]
+NotebookOptionsPosition[     17113,        430]
+NotebookOutlinePosition[     17576,        448]
+CellTagsIndexPosition[     17533,        445]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Core Data", "Title",
+ CellChangeTimes->{{3.9273022707764816`*^9, 
+  3.927302272161703*^9}},ExpressionUUID->"2c46c14c-97cc-254a-87ff-\
+cebbab147adb"],
+
+Cell["Brendan Apple", "Subtitle",
+ CellChangeTimes->{{3.92730230018367*^9, 
+  3.9273023028262577`*^9}},ExpressionUUID->"f4ba7142-8787-1540-8886-\
+1739c2dba3b7"],
+
+Cell[CellGroupData[{
+
+Cell["Japanese", "Subsection",
+ CellChangeTimes->{{3.9273023208606777`*^9, 
+  3.9273023217251415`*^9}},ExpressionUUID->"7419348e-998c-9d44-8b29-\
+2c098608446a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"jData", " ", "=", " ", 
+   RowBox[{
+   "Import", "[", 
+    "\"\<C:\\\\Users\\\\brend\\\\OneDrive\\\\Desktop\\\\School\\\\REX \
+Computational Science 2024\\\\Japanese Translation\\\\Data\\\\NICT \
+Corpus\\\\jCorpus.csv\>\"", "]"}]}], ";"}], "\n", 
+ RowBox[{"Length", "[", "jData", "]"}]}], "Code",
+ CellChangeTimes->{{3.927488642655264*^9, 3.927488720104931*^9}, {
+   3.927488769385416*^9, 3.927488776027358*^9}, {3.9275599310316505`*^9, 
+   3.9275599552293644`*^9}, {3.927560044182877*^9, 3.927560046339775*^9}, {
+   3.927573851486944*^9, 3.9275738542982883`*^9}, 3.927745022078218*^9, 
+   3.927745071076292*^9, {3.9283173178194036`*^9, 3.928317345095743*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"e8a16f4d-0a5e-8346-9d96-6706b7345d8b"],
+
+Cell[BoxData["105"], "Output",
+ CellChangeTimes->{{3.928317318549183*^9, 3.9283173325982494`*^9}, 
+   3.9287456707507076`*^9, 3.928746089337187*^9},
+ CellLabel->"Out[28]=",ExpressionUUID->"211bd458-7d2c-be45-8d9b-90d23f072719"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\<C:\\\\Users\\\\brend\\\\OneDrive\\\\Desktop\\\\School\\\\REX \
+Computational Science 2024\\\\Japanese Translation\\\\Data\\\\jData.csv\>\"", 
+    ",", " ", "jData"}], "]"}], ";"}]], "Code",
+ CellChangeTimes->{{3.9273024703657722`*^9, 3.927302485006996*^9}, 
+   3.927303227421685*^9},
+ CellLabel->"In[3]:=",ExpressionUUID->"8cf388c4-7430-9841-a237-c810640ef177"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"jLengths", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"StringLength", "[", "#", "]"}], "&"}], "/@", "jData"}]}], 
+  ";"}]], "Code",
+ CellChangeTimes->{{3.92740213194195*^9, 3.927402163966348*^9}, {
+   3.92740226144241*^9, 3.927402262101839*^9}, 3.9274888225590687`*^9, {
+   3.927745039989847*^9, 3.927745042611393*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"5dbd241f-e7f8-d041-8d6f-39efeb6318d6"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\<C:\\\\Users\\\\brend\\\\OneDrive\\\\Desktop\\\\School\\\\REX \
+Computational Science 2024\\\\Japanese \
+Translation\\\\Data\\\\jLengths.csv\>\"", ",", " ", "jLengths"}], "]"}], 
+  ";"}]], "Code",
+ CellChangeTimes->{{3.92740217031216*^9, 3.927402179021869*^9}, {
+  3.928317348404703*^9, 3.928317348675082*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"9fa6c476-9638-0d48-9549-18bcd60453fb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["English", "Subsection",
+ CellChangeTimes->{{3.927302325203663*^9, 
+  3.927302325984205*^9}},ExpressionUUID->"2c429dfb-b79f-e04b-8f70-\
+2d03d0f1522f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"eData", " ", "=", " ", 
+   RowBox[{
+   "Import", "[", 
+    "\"\<C:\\\\Users\\\\brend\\\\OneDrive\\\\Desktop\\\\School\\\\REX \
+Computational Science 2024\\\\Japanese Translation\\\\Data\\\\NICT \
+Corpus\\\\eCorpus.csv\>\"", "]"}]}], ";"}], "\n", 
+ RowBox[{"Length", "[", "eData", "]"}]}], "Code",
+ CellChangeTimes->{{3.9274888372368813`*^9, 3.927488868850609*^9}, {
+   3.927560066059803*^9, 3.92756012314994*^9}, 3.927745046755224*^9, 
+   3.927745079129581*^9, {3.928317356033358*^9, 3.92831735851673*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"0ae4dd93-0b41-b946-9f45-125d03551a4a"],
+
+Cell[BoxData["105"], "Output",
+ CellChangeTimes->{3.928317359878708*^9, 3.928317390639342*^9, 
+  3.92874567111528*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"018833ec-0b1b-4742-a9bf-8ef4e631184d"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\<C:\\\\Users\\\\brend\\\\OneDrive\\\\Desktop\\\\School\\\\REX \
+Computational Science 2024\\\\Japanese Translation\\\\Data\\\\eData.csv\>\"", 
+    ",", " ", "eData"}], "]"}], ";"}]], "Code",
+ CellChangeTimes->{{3.9273024703657722`*^9, 3.927302485006996*^9}, {
+   3.927302631604946*^9, 3.927302634734106*^9}, 3.927303223216295*^9},
+ CellLabel->"In[8]:=",ExpressionUUID->"cd670362-03fe-dc4d-8a85-09af25ee8f52"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Neural Machine Translation (NMT)", "Subsection",
+ CellChangeTimes->{{3.9273028198775826`*^9, 3.92730282291082*^9}, {
+  3.9273032479461155`*^9, 
+  3.927303255217659*^9}},ExpressionUUID->"64f6de11-1594-8d40-8619-\
+f12865534ee2"],
+
+Cell["Google Translate", "Text",
+ CellChangeTimes->{{3.927302832596182*^9, 
+  3.9273028489674034`*^9}},ExpressionUUID->"96d15961-26a9-f64c-8aa8-\
+d59680c1d7ac"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"googleData", " ", "=", " ", 
+   RowBox[{"{", "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"n", " ", "=", " ", "0"}], ";"}], "\n"}], "\n", 
+ RowBox[{"Print", "[", 
+  RowBox[{
+   RowBox[{"Dynamic", "[", "n", "]"}], " ", "+", " ", "\"\< / \>\"", " ", "+",
+    " ", 
+   RowBox[{"Length", "[", "jData", "]"}]}], "]"}], "\n", 
+ RowBox[{
+  RowBox[{"ProgressIndicator", "[", 
+   RowBox[{
+    RowBox[{"Dynamic", "[", "n", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", " ", 
+      RowBox[{"Length", "[", "jData", "]"}]}], "}"}]}], "]"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", " ", 
+    RowBox[{"i", "<=", 
+     RowBox[{"Length", "[", "jData", "]"}]}], ",", " ", 
+    RowBox[{"i", "++"}], ",", "\n", "\t", 
+    RowBox[{
+     RowBox[{"n", " ", "=", " ", "i"}], ";", "\n", "\t", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"googleData", ",", " ", 
+       RowBox[{"TextTranslation", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"jData", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", " ", "\"\<English\>\"", ",", 
+         " ", 
+         RowBox[{"Method", "->", "\"\<Google\>\""}]}], "]"}]}], "]"}], 
+     ";"}]}], "\n", "]"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"Length", "[", "googleData", "]"}], "\n"}], "\n", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\<C:\\\\Users\\\\brend\\\\OneDrive\\\\Desktop\\\\School\\\\REX \
+Computational Science 2024\\\\Japanese \
+Translation\\\\Data\\\\googleData.csv\>\"", ",", " ", "googleData"}], 
+  "]"}]}], "Code",
+ CellChangeTimes->{{3.9273028696062756`*^9, 3.927302869607273*^9}, {
+   3.9273030040258083`*^9, 3.92730302159636*^9}, {3.927487301762755*^9, 
+   3.927487417172407*^9}, {3.927487486471145*^9, 3.927487533268938*^9}, {
+   3.927487590397398*^9, 3.927487617751923*^9}, {3.927488051969639*^9, 
+   3.927488054623289*^9}, {3.927488090087282*^9, 3.927488091457476*^9}, 
+   3.92757260093936*^9, {3.927572638933405*^9, 3.927572640122553*^9}, 
+   3.9275728367844296`*^9, {3.927573590074147*^9, 3.9275735938067093`*^9}, {
+   3.927574569226959*^9, 3.927574569932287*^9}, {3.927576500251604*^9, 
+   3.927576500491066*^9}, {3.928317409344866*^9, 3.928317439148565*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"ee6242e3-dcc3-0046-ad02-f73e7dd51a0e"],
+
+Cell[BoxData[
+ RowBox[{"105", "+", "\<\" / \"\>", "+", 
+  DynamicBox[ToBoxes[$CellContext`n, StandardForm],
+   ImageSizeCache->{
+    15.834375245230538`, {0.08437499856310282, 
+     6.210937394228365}}]}]], "Print",
+ CellChangeTimes->{3.927745255966419*^9, 3.92831744296637*^9, 
+  3.928745671143219*^9},
+ CellLabel->
+  "During evaluation of \
+In[9]:=",ExpressionUUID->"4f925149-1a64-594c-880d-ec4cb142c3ea"],
+
+Cell[BoxData[
+ ProgressIndicatorBox[Dynamic[$CellContext`n], {1, 105}]], "Output",
+ CellChangeTimes->{3.9274876224592457`*^9, 3.927572846622579*^9, 
+  3.927574697897232*^9, 3.927745255962347*^9, 3.928317442973873*^9, 
+  3.92874567114719*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"de79ea81-f86f-f54f-9f87-13f0f5bf0c98"],
+
+Cell[BoxData["105"], "Output",
+ CellChangeTimes->{3.9274876224592457`*^9, 3.927572846622579*^9, 
+  3.927574697897232*^9, 3.927745255962347*^9, 3.928317442973873*^9, 
+  3.92874586025877*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"4b4ccb8b-af46-af4b-a2a9-9a51a887a242"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\brend\\\\OneDrive\\\\Desktop\\\\School\\\\\
+REX Computational Science 2024\\\\Japanese \
+Translation\\\\Data\\\\googleData.csv\"\>"], "Output",
+ CellChangeTimes->{3.9274876224592457`*^9, 3.927572846622579*^9, 
+  3.927574697897232*^9, 3.927745255962347*^9, 3.928317442973873*^9, 
+  3.928745860301279*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"3a8d2b6c-8b96-1745-bc30-874b4937c9a9"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\<C:\\\\Users\\\\brend\\\\OneDrive\\\\Desktop\\\\School\\\\REX \
+Computational Science 2024\\\\Japanese \
+Translation\\\\Data\\\\googleData.csv\>\"", ",", " ", "googleData"}], "]"}], 
+  ";"}]], "Code",
+ CellChangeTimes->{{3.927303055340355*^9, 3.927303062134255*^9}, {
+  3.927303220368014*^9, 3.927303221344002*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"86fb84d5-12f8-5d4e-be44-1b31447193a0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TextTranslation", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"jData", "[", 
+     RowBox[{"[", "2", "]"}], "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}], ",", " ", "\"\<English\>\"", ",", " ", 
+   RowBox[{"Method", "->", "\"\<Google\>\""}]}], "]"}]], "Code",
+ CellChangeTimes->{{3.927573623089107*^9, 3.9275736261222*^9}, {
+  3.9275739009912176`*^9, 3.927573901118349*^9}, {3.9275741467009163`*^9, 
+  3.9275741479224243`*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"5c795bc5-d7bb-ec45-b986-5458405cc5f7"],
+
+Cell[BoxData["\<\"The institution is run by the Shingon Buddhism Kyoto Gakuen \
+Educational Corporation, which is run by 14 head temples of the Ancient \
+Shingon sect (Ninna-ji, Hosan-ji, Chogosonshi-ji, Kanshuji, Daikaku-ji, \
+Daigo-ji, Nakayama-dera (Takarazuka City), Saidai-ji (Nara City), To-ji, \
+Kiyoharajin Seicho-ji, Sennyuji, Zentsu-ji, Suma-dera and the head temple \
+Zuishin-in) and cooperates in the promotion of education with the three \
+schools of Shingon Buddhism, Chizan-ha, Buzan-ha, and Shingon \
+Buddhism.\"\>"], "Output",
+ CellChangeTimes->{
+  3.9275736295315857`*^9, 3.927573716736313*^9, 3.9275737670081406`*^9, 
+   3.927573861096758*^9, {3.927573893682497*^9, 3.92757390351415*^9}, 
+   3.927574092927795*^9, 3.927574208896303*^9, 3.92757467434416*^9, 
+   3.9287458624139824`*^9},
+ CellLabel->"Out[17]=",ExpressionUUID->"a81d59c4-d5fc-184d-a1d3-1ebf7ef657d9"]
+}, Open  ]],
+
+Cell["Microsoft Translate", "Text",
+ CellChangeTimes->{{3.9273028536910305`*^9, 
+  3.9273028591087704`*^9}},ExpressionUUID->"eeceb6ee-6b02-694d-b971-\
+47d03f7f7a73"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"mData", " ", "=", " ", 
+   RowBox[{"{", "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"n", " ", "=", " ", "0"}], ";"}], "\n"}], "\n", 
+ RowBox[{"Print", "[", 
+  RowBox[{
+   RowBox[{"Dynamic", "[", "n", "]"}], " ", "+", " ", "\"\< / \>\"", " ", "+",
+    " ", 
+   RowBox[{"Length", "[", "jData", "]"}]}], "]"}], "\n", 
+ RowBox[{
+  RowBox[{"ProgressIndicator", "[", 
+   RowBox[{
+    RowBox[{"Dynamic", "[", "n", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", " ", 
+      RowBox[{"Length", "[", "jData", "]"}]}], "}"}]}], "]"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", " ", 
+    RowBox[{"i", "<=", 
+     RowBox[{"Length", "[", "jData", "]"}]}], ",", " ", 
+    RowBox[{"i", "++"}], ",", "\n", "\t", 
+    RowBox[{
+     RowBox[{"n", " ", "=", " ", "i"}], ";", "\n", "\t", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"mData", ",", " ", 
+       RowBox[{"TextTranslation", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"jData", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", " ", "\"\<English\>\"", ",", 
+         " ", 
+         RowBox[{"Method", "->", "\"\<Microsoft\>\""}]}], "]"}]}], "]"}], 
+     ";"}]}], "\n", "]"}], "\n"}], "\n", 
+ RowBox[{"Length", "[", "mData", "]"}], "\n", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\<C:\\\\Users\\\\brend\\\\OneDrive\\\\Desktop\\\\School\\\\REX \
+Computational Science 2024\\\\Japanese Translation\\\\Data\\\\mData.csv\>\"", 
+   ",", " ", "mData"}], "]"}]}], "Code",
+ CellChangeTimes->{{3.9273028666537437`*^9, 3.92730286665473*^9}, {
+   3.927303110817967*^9, 3.927303118661137*^9}, {3.927487996744449*^9, 
+   3.927488045783203*^9}, {3.927488079314535*^9, 3.927488085667399*^9}, {
+   3.927572612751929*^9, 3.927572630115715*^9}, 3.927574576220815*^9, {
+   3.927576491091557*^9, 3.927576520447731*^9}, {3.927579546357304*^9, 
+   3.927579557905703*^9}, {3.928322611437271*^9, 3.928322637194006*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"de813df2-ed49-a248-8dc0-f853cc272e6a"],
+
+Cell[BoxData[
+ RowBox[{"105", "+", "\<\" / \"\>", "+", 
+  DynamicBox[ToBoxes[$CellContext`n, StandardForm],
+   ImageSizeCache->{
+    15.834375245230538`, {0.08437499856310282, 
+     6.210937394228365}}]}]], "Print",
+ CellChangeTimes->{3.927576529986494*^9, 3.927746082041556*^9, 
+  3.928322629338337*^9, 3.928322659933344*^9, 3.9287458624994736`*^9},
+ CellLabel->
+  "During evaluation of \
+In[18]:=",ExpressionUUID->"74a97403-bcaa-8e41-a9a0-16da094dfeb4"],
+
+Cell[BoxData[
+ ProgressIndicatorBox[Dynamic[$CellContext`n], {1, 105}]], "Output",
+ CellChangeTimes->{3.927303162388386*^9, 3.9273054405935097`*^9, 
+  3.9273055072761955`*^9, 3.9273056339776*^9, 3.927309545372607*^9, 
+  3.927310558305113*^9, 3.92731179000641*^9, 3.927487266413069*^9, 
+  3.927576529982479*^9, 3.927746082013356*^9, 3.928322629338337*^9, 
+  3.928322659943075*^9, 3.928745862502451*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"feee4f89-89ab-1b48-8312-f9ac11a5777e"],
+
+Cell[BoxData["105"], "Output",
+ CellChangeTimes->{3.927303162388386*^9, 3.9273054405935097`*^9, 
+  3.9273055072761955`*^9, 3.9273056339776*^9, 3.927309545372607*^9, 
+  3.927310558305113*^9, 3.92731179000641*^9, 3.927487266413069*^9, 
+  3.927576529982479*^9, 3.927746082013356*^9, 3.928322629338337*^9, 
+  3.928322659943075*^9, 3.9287460870394745`*^9},
+ CellLabel->"Out[23]=",ExpressionUUID->"48fd0350-8fb6-fe41-9814-ae2640a1a287"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\brend\\\\OneDrive\\\\Desktop\\\\School\\\\\
+REX Computational Science 2024\\\\Japanese Translation\\\\Data\\\\mData.csv\"\
+\>"], "Output",
+ CellChangeTimes->{3.927303162388386*^9, 3.9273054405935097`*^9, 
+  3.9273055072761955`*^9, 3.9273056339776*^9, 3.927309545372607*^9, 
+  3.927310558305113*^9, 3.92731179000641*^9, 3.927487266413069*^9, 
+  3.927576529982479*^9, 3.927746082013356*^9, 3.928322629338337*^9, 
+  3.928322659943075*^9, 3.9287460870575123`*^9},
+ CellLabel->"Out[24]=",ExpressionUUID->"e7312544-a226-1145-9b52-e1bca7d0a763"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\<C:\\\\Users\\\\brend\\\\OneDrive\\\\Desktop\\\\School\\\\REX \
+Computational Science 2024\\\\Japanese Translation\\\\Data\\\\mData.csv\>\"", 
+    ",", " ", "mData"}], "]"}], ";"}]], "Code",
+ CellChangeTimes->{{3.9273031464856014`*^9, 3.9273031550812287`*^9}, {
+  3.927303217684773*^9, 3.927303218382324*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"32f3ef1c-b437-6640-86e9-f4993af3f55f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TextTranslation", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"jData", "[", 
+     RowBox[{"[", "2", "]"}], "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}], ",", " ", "\"\<English\>\"", ",", " ", 
+   RowBox[{"Method", "->", "\"\<Microsoft\>\""}]}], "]"}]], "Code",
+ CellChangeTimes->{{3.927573781493691*^9, 3.927573840416559*^9}, {
+  3.927574153043415*^9, 3.927574153648503*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"82b6997f-aecd-e949-b8b8-9fa8cc0035b5"],
+
+Cell[BoxData["\<\"The establishment is the 14 main temples of the Kogi \
+Shingon sect (Ninna-ji, Hozan-ji, Asago Abiko-ji, S\:014dsh\:016b-ji, \
+Daikaku-ji, Daigo-ji, Nakasen-ji (Takarazuka City), Saidai-ji (Nara City), \
+To-ji, Kiyoarajin Kiyosumi-ji, Sench\:016b-ji, Zentsu-ji, Suma-ji, and \
+Omotoyama Soshin-in), and the three sects of Shingon Buddhism, Chizan sect, \
+Shingon sect Toyoyama sect, and Shingi Shingon sect cooperate in the \
+promotion of education.\"\>"], "Output",
+ CellChangeTimes->{
+  3.9275741246583385`*^9, {3.9275741841622715`*^9, 3.9275741959802036`*^9}, 
+   3.927574667008875*^9, 3.9287460892735977`*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"1d35e791-50ae-6644-aae1-0dc46f09d40c"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1306.2857142857142`, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+DockedCells->{},
+Magnification:>0.8 Inherited,
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e22c9742-c739-7d48-830e-0239c001c21c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 154, 3, 78, "Title",ExpressionUUID->"2c46c14c-97cc-254a-87ff-cebbab147adb"],
+Cell[737, 27, 160, 3, 42, "Subtitle",ExpressionUUID->"f4ba7142-8787-1540-8886-1739c2dba3b7"],
+Cell[CellGroupData[{
+Cell[922, 34, 160, 3, 43, "Subsection",ExpressionUUID->"7419348e-998c-9d44-8b29-2c098608446a"],
+Cell[CellGroupData[{
+Cell[1107, 41, 775, 14, 55, "Code",ExpressionUUID->"e8a16f4d-0a5e-8346-9d96-6706b7345d8b"],
+Cell[1885, 57, 227, 3, 25, "Output",ExpressionUUID->"211bd458-7d2c-be45-8d9b-90d23f072719"]
+}, Open  ]],
+Cell[2127, 63, 431, 9, 40, "Code",ExpressionUUID->"8cf388c4-7430-9841-a237-c810640ef177"],
+Cell[2561, 74, 443, 10, 40, "Code",ExpressionUUID->"5dbd241f-e7f8-d041-8d6f-39efeb6318d6"],
+Cell[3007, 86, 457, 10, 40, "Code",ExpressionUUID->"9fa6c476-9638-0d48-9549-18bcd60453fb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3501, 101, 155, 3, 43, "Subsection",ExpressionUUID->"2c429dfb-b79f-e04b-8f70-2d03d0f1522f"],
+Cell[CellGroupData[{
+Cell[3681, 108, 620, 12, 55, "Code",ExpressionUUID->"0ae4dd93-0b41-b946-9f45-125d03551a4a"],
+Cell[4304, 122, 196, 3, 25, "Output",ExpressionUUID->"018833ec-0b1b-4742-a9bf-8ef4e631184d"]
+}, Open  ]],
+Cell[4515, 128, 477, 9, 40, "Code",ExpressionUUID->"cd670362-03fe-dc4d-8a85-09af25ee8f52"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5029, 142, 232, 4, 43, "Subsection",ExpressionUUID->"64f6de11-1594-8d40-8619-f12865534ee2"],
+Cell[5264, 148, 160, 3, 28, "Text",ExpressionUUID->"96d15961-26a9-f64c-8aa8-d59680c1d7ac"],
+Cell[CellGroupData[{
+Cell[5449, 155, 2354, 56, 223, "Code",ExpressionUUID->"ee6242e3-dcc3-0046-ad02-f73e7dd51a0e"],
+Cell[7806, 213, 407, 10, 18, "Print",ExpressionUUID->"4f925149-1a64-594c-880d-ec4cb142c3ea"],
+Cell[8216, 225, 320, 5, 25, "Output",ExpressionUUID->"de79ea81-f86f-f54f-9f87-13f0f5bf0c98"],
+Cell[8539, 232, 268, 4, 25, "Output",ExpressionUUID->"4b4ccb8b-af46-af4b-a2a9-9a51a887a242"],
+Cell[8810, 238, 415, 6, 25, "Output",ExpressionUUID->"3a8d2b6c-8b96-1745-bc30-874b4937c9a9"]
+}, Open  ]],
+Cell[9240, 247, 463, 10, 40, "Code",ExpressionUUID->"86fb84d5-12f8-5d4e-be44-1b31447193a0"],
+Cell[CellGroupData[{
+Cell[9728, 261, 528, 11, 40, "Code",ExpressionUUID->"5c795bc5-d7bb-ec45-b986-5458405cc5f7"],
+Cell[10259, 274, 883, 13, 57, "Output",ExpressionUUID->"a81d59c4-d5fc-184d-a1d3-1ebf7ef657d9"]
+}, Open  ]],
+Cell[11157, 290, 165, 3, 28, "Text",ExpressionUUID->"eeceb6ee-6b02-694d-b971-47d03f7f7a73"],
+Cell[CellGroupData[{
+Cell[11347, 297, 2090, 51, 209, "Code",ExpressionUUID->"de813df2-ed49-a248-8dc0-f853cc272e6a"],
+Cell[13440, 350, 455, 10, 18, "Print",ExpressionUUID->"74a97403-bcaa-8e41-a9a0-16da094dfeb4"],
+Cell[13898, 362, 480, 7, 25, "Output",ExpressionUUID->"feee4f89-89ab-1b48-8312-f9ac11a5777e"],
+Cell[14381, 371, 430, 6, 25, "Output",ExpressionUUID->"48fd0350-8fb6-fe41-9814-ae2640a1a287"],
+Cell[14814, 379, 571, 8, 25, "Output",ExpressionUUID->"e7312544-a226-1145-9b52-e1bca7d0a763"]
+}, Open  ]],
+Cell[15400, 390, 457, 9, 40, "Code",ExpressionUUID->"32f3ef1c-b437-6640-86e9-f4993af3f55f"],
+Cell[CellGroupData[{
+Cell[15882, 403, 478, 10, 40, "Code",ExpressionUUID->"82b6997f-aecd-e949-b8b8-9fa8cc0035b5"],
+Cell[16363, 415, 710, 10, 57, "Output",ExpressionUUID->"1d35e791-50ae-6644-aae1-0dc46f09d40c"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
